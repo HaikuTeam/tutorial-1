@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import FakeUploader from './FakeUploader';
+import Tutorial1 from '@haiku/matthew-tutorial1/react'
 
 class HaikuTutorial extends React.Component {
   constructor (props) {
@@ -26,9 +27,12 @@ class HaikuTutorial extends React.Component {
   }
 
   render () {
-    // Gee, this seems kind of boring. Perhaps a designer can spice it up?
+    // Wow, this new Haiku design looks great!
     return (
-      <div>{this.state.uploadProgress}</div>
+      <Tutorial1
+        haikuOptions={{loop: true}}
+        haikuStates={{uploadProgress: { value: this.state.uploadProgress }}}
+        />
     );
   }
 }
